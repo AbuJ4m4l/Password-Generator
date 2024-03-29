@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Password Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="select-none bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md w-full">
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="password-length">
+        Password Length
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password-length" type="number" min="4" max="32" value="12">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="include-uppercase">
+        Include Uppercase
+      </label>
+      <input class="mr-2 leading-tight" id="include-uppercase" type="checkbox" checked>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="include-lowercase">
+        Include Lowercase
+      </label>
+      <input class="mr-2 leading-tight" id="include-lowercase" type="checkbox" checked>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="include-numbers">
+        Include Numbers
+      </label>
+      <input class="mr-2 leading-tight" id="include-numbers" type="checkbox" checked>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="include-symbols">
+        Include Symbols
+      </label>
+      <input class="mr-2 leading-tight" id="include-symbols" type="checkbox" checked>
+    </div>
+    <div class="flex items-center justify-between mb-4">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="generatePassword()">
+        Generate Password
+      </button>
+    </div>
+    <div class="flex items-center justify-between">
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="text" readonly>
+      <button class="ml-2" onclick="copyPassword()">
+        <svg class="w-6 h-6 text-gray-500 hover:text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
